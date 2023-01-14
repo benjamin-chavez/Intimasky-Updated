@@ -1,0 +1,10 @@
+<div class="container-mask m-15">
+  <div class="form-container">
+  <h2 class="pt-15">Edit the mask:</h2>
+    <%= render 'form' %>
+    <div class="show-buttons">
+      <%= link_to 'Go back', mask_path(@mask), class: "button weird-button" %>
+      <%= link_to 'See all masks', masks_path, class: "button weird-button"  %>
+    </div>
+  </div>
+</div>

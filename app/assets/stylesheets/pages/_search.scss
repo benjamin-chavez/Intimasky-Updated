@@ -1,0 +1,82 @@
+#search.container {
+    margin-top: 76px;
+    // height: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.search-header {
+    margin-bottom: 100px;
+    padding-top: 100px;
+    text-shadow: 0px 0px 1px #DE5887 !important;
+}
+
+.search-bar {
+    width: 50% !important;
+    margin: 0 auto !important;
+    box-shadow: 0px 0px 1px #DE5887 !important;
+}
+
+.search-form {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.featured-row {
+    text-decoration: underline;
+    text-shadow: 0px 0px 1px #DE5887 !important;
+}
+
+
+
+
+#card1 {
+    background: linear-gradient(rgba(169, 115, 114, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ebayimg.com/images/g/M8cAAOSwUDldNeW2/s-l1600.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card2 {
+    background: linear-gradient(rgba(169, 115, 114, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/2315712/pexels-photo-2315712.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card3 {
+    background: linear-gradient(rgba(169, 115, 114, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/236x/27/cf/93/27cf93e8d3576312c9aea723c0ddbcea--men-editorial-gas-masks.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#search a {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.btn.btn-primary {
+    background-color: black !important;
+    // border-color: #DE5887 !important;
+    color: #DE5887 !important;
+    font-weight: bold !important;
+}
+
+.btn.btn-primary:hover {
+    background-color: black !important;
+    border-color: #DE5887 !important;
+    box-shadow: 0px 0px 5px #DE5887 !important;
+    color: #DE5887 !important;
+    font-weight: bold !important;
+}
+
+.feature-card{
+    background-color: pink;
+    display: inline;
+    height: 375px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}

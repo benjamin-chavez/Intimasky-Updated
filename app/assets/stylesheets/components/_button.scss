@@ -1,0 +1,49 @@
+.button {
+    font-family: 'Raleway', sans-serif;
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #A01170;
+    margin: 20px 20px 20px 20px;
+    color: #A01170;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.5s;
+
+    &:hover{
+      transition-duration: 0.5s;
+      background-color:white;
+      text-decoration: none;
+      color: #A01170;
+      }
+
+}
+
+.submit-button {
+  background-color: #A01170;
+  color: white;
+  border: 2px solid white;
+  font-family: 'Raleway', sans-serif;
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  margin: 20px 20px 20px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.5s;
+    &:hover{
+      text-decoration: none;
+      background-color: #851961;
+      color: white;
+      }
+}

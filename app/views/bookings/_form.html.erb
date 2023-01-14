@@ -1,0 +1,6 @@
+<%= simple_form_for [@mask, @booking] do |f| %>
+  <%= f.input :start_date, as: :string, wrapper_html: { class: "inline_field_wrapper" }, label: "From"%>
+  <%= f.input :end_date, as: :string, wrapper_html: { class: "inline_field_wrapper" }, label: "To", disabled: true%>
+  <%= f.submit class: "submit-button" %>
+<% end %>
+

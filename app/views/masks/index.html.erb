@@ -1,0 +1,36 @@
+<div class="index-container-main">
+    <div class="container-mask pt-5 text-center" id="index-container-mask">
+        <section class="card-index">
+            <h1>What do you desire?</h1>
+            <% if @masks %>
+            <div class="row justify-content-center">
+                <% @masks.shuffle.each do |mask| %>
+                <div class="card-product m-4 col-lg-2 col-md-4 col-sm-8 col-8">
+                    <div class="border-card">
+                        <div class="card__image-container">
+                            <%= cl_image_tag mask.photo.key%>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <h5>
+                            <%= link_to(mask.name, mask_path(mask)) %>
+                            </h3>
+                            <h6>
+                                <%= mask.description %>
+                        </h5>
+                        <p>€
+                            <%= mask.price %> per day</p>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+            <% end %>
+            <a class="button" href="/search">Search again</a>
+        </section>
+        <section class="map-index">
+            <div id="map" style="width: 30vw; min-height: 90vh;
+  height: 90vh;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        </section>
+    </div>
+</div>
+<!-- if statement because of Heroku -->

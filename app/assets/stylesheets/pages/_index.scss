@@ -1,0 +1,65 @@
+// Import page-specific CSS files here.
+@import "home";
+
+#index-container-mask {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.index-container-main {
+    width: 100vw;
+    display: flex;
+}
+
+.card-index {
+    display: inline-block;
+    // margin-top: 20px;
+}
+
+.map-index {
+    height: 100%;
+    position: sticky;
+    top: 0;
+
+}
+
+#map {
+    display: inline-block;
+    margin-top: 40px;
+    box-shadow: 0px 0px 2px;
+}
+
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+
+    // .cards {
+    //   grid-template-columns: 1fr;
+    // }
+    #map {
+        display: none;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+    // .cards {
+    //   grid-template-columns: 1fr 1fr;
+    // }
+    #map {
+        display: none;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+
+    // .cards {
+    //   grid-template-columns: 1fr 1fr 1fr;
+    // }
+    #map {
+        display: block;
+    }
+}

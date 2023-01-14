@@ -1,0 +1,35 @@
+<div class="container-mask text-center">
+    <div class="" id="search">
+        <section class="search-header d-flex flex-column">
+            <h1>What type of mask are you looking for?</h1>
+            <div class="text-center search-form">
+              <%= simple_form_for :search, method: :get, url: masks_path do |f| %>
+                <%= f.input :query, label: false, placeholder: "Search", input_html: { class: "text-center search-bar"} %>
+                <%= f.submit 'Submit', class: "submit-button" %>
+              <% end %>
+            </div>
+        </section>
+      </div>
+        <hr>
+<h2 class="text-center pb-5">Featured Masks</h2>
+            <div class="row justify-content-center">
+              <% masks = Mask.all %>
+              <% selected_masks = masks.sample(4) %>
+              <% selected_masks.each do |mask| %>
+                <div class="card-product m-4 col-lg-2 col-md-6 col-sm-12">
+                  <div class="border-card">
+                    <div class="card__image-container">
+                    <%= cl_image_tag mask.photo.key%>
+                    </div>
+                  </div>
+
+                  <div class="card__content">
+                    <h5><%= link_to(mask.name, mask_path(mask)) %></h3>
+                    <h6><%= mask.description %></h5>
+                    <p>€<%= mask.price%> per day</p>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+    </div>
+</div>

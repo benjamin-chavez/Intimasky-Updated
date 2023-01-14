@@ -1,0 +1,53 @@
+<div class="container-mask pt-5">
+  <h1 class="">Your Bookings</h1>
+  <% if @bookings %>
+      <div class="row justify-content-center text-center">
+        <% @bookings.each do |booking| %>
+          <div class="card-product m-4 col-lg-2 col-md-4 col-sm-12">
+            <div class="border-card">
+              <div class="card__image-container">
+                <%= cl_image_tag booking.mask.photo.key%>
+              </div>
+            </div>
+            <div class="card__content">
+              <h5><%= link_to(booking.mask.name, mask_path(booking.mask)) %></h3>
+              <h6>From <%= booking.start_date %></h6>
+              <h6>To <%= booking.end_date %></h6>
+              <p>€<%= booking.mask.price%> per day</p>
+              <%= link_to "Cancel", booking_path(booking),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }, class: "submit-button" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  <div class="uploaded-masks pt-5">
+    <h1>Your Mask Posts</h1>
+    <% if @user.masks %>
+      <div class="row justify-content-center text-center">
+        <% @user.masks.each do |mask| %>
+          <div class="card-product m-4 col-lg-2 col-md-4 col-sm-12">
+            <div class="border-card">
+              <div class="card__image-container">
+              <%= cl_image_tag mask.photo.key%>
+              </div>
+            </div>
+
+            <div class="card__content">
+              <h5><%= link_to(mask.name, mask_path(mask)) %></h5>
+              <h6><%= mask.description %></h6>
+              <p>€<%= mask.price%> per day</p>
+              <%= link_to "Edit", edit_mask_path(mask), class: "submit-button",
+                  method: :get %>
+              <%= link_to "Remove", mask_path(mask.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }, class: "submit-button" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
